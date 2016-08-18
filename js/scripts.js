@@ -31,10 +31,7 @@ else if(realNumber<10 && realNumber>0){
 }
 var getRomanThous = function(numberinput){
   var realNumber = parseInt(numberinput);
-  if (realNumber === 9000){
-    return "YY";
-  }
-  if (realNumber < 10000){
+  if (realNumber < 4000){
     var romanArray=[];
     if (realNumber===1000){
       return "M";
@@ -134,6 +131,6 @@ $(document).ready(function(){
     event.preventDefault();
     console.log("Button Clicked");
     var inputNumber = $("#input").val();
-    console.log(getRomanNumerals(inputNumber));
+    $("#output").append(getRomanNumerals(inputNumber));
   });
 });
